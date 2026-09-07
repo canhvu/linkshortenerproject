@@ -1,4 +1,4 @@
-import { SignInButton, SignUpButton } from "@clerk/nextjs";
+import { SignUpButton } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
 import {
   BarChart3,
@@ -67,11 +67,6 @@ export default async function Home() {
               <SignUpButton mode="modal">
                 <Button size="lg">Start shortening links</Button>
               </SignUpButton>
-              <SignInButton mode="modal">
-                <Button variant="outline" size="lg">
-                  Sign in to your workspace
-                </Button>
-              </SignInButton>
             </div>
             <ul className="grid gap-3 text-sm text-muted-foreground sm:grid-cols-3">
               {highlights.map((item) => (
