@@ -1,3 +1,7 @@
+---
+description: Read this before implementing or modifying any authentication in the project. 
+---
+
 # Auth And Routing
 
 - Use Clerk for all authentication and user session flows in this app. Do not add or suggest any other auth provider, custom session system, or parallel auth path.

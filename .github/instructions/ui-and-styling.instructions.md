@@ -1,3 +1,7 @@
+---
+description: Read this before creating or modifying any UI components in the project.
+---
+
 # UI And Styling
 
 - Build all UI in this app with shadcn/ui components.

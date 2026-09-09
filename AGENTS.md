@@ -2,16 +2,9 @@
 
 Instructions for AI coding agents (Copilot, Claude, etc.) working in this repository.
 
-For detailed guidelines on specific topics, refer to the modular documentation in the `/docs` directory.
-
-> **CRITICAL: You MUST read every relevant individual instructions file in `/docs` BEFORE
-> generating ANY code.** Do not write, edit, or suggest code first and check docs after —
-> check first, every time, even for small or seemingly obvious changes. If a change
-> touches auth, routing, UI, or styling, open and read the matching `/docs` file(s) below
-> before making the change.
-
 Relevant docs:
 - [docs/auth-and-routing.md](docs/auth-and-routing.md) for Clerk-only auth rules, protected route expectations, homepage redirect behavior, and modal auth flows.
+- [.github/instructions/server-actions.instructions.md](.github/instructions/server-actions.instructions.md) for mutation flow rules, server action placement, Zod validation, auth checks, and data-layer boundaries.
 - [docs/ui-and-styling.md](docs/ui-and-styling.md) for shadcn/ui-only component rules and UI implementation constraints.
 
 ## Project Overview

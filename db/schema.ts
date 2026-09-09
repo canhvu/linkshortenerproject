@@ -15,3 +15,6 @@ export const linksTable = pgTable("links", {
   createdAt: timestamp({ withTimezone: true }).notNull().defaultNow(),
   updatedAt: timestamp({ withTimezone: true }).notNull().defaultNow(),
 });
+
+export type Link = typeof linksTable.$inferSelect;
+
