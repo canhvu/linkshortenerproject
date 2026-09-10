@@ -23,7 +23,7 @@ export async function getLinkByShortCode(shortCode: string) {
 export async function updateLinkUrl(
   userId: string,
   linkId: number,
-  originalUrl: string
+  originalUrl: string,
 ) {
   const [link] = await db
     .update(linksTable)
@@ -66,7 +66,10 @@ export async function createLink(userId: string, originalUrl: string) {
       return link;
     } catch (error) {
       // Retry with a new short code if we happened to collide with an existing one.
-      if (!isUniqueViolation(error) || attempt === MAX_SHORT_CODE_ATTEMPTS - 1) {
+      if (
+        !isUniqueViolation(error) ||
+        attempt === MAX_SHORT_CODE_ATTEMPTS - 1
+      ) {
         throw error;
       }
     }

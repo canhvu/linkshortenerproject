@@ -60,7 +60,11 @@ export async function updateLinkAction(input: UpdateLinkInput) {
 
   let updated;
   try {
-    updated = await updateLinkUrl(userId, parsed.data.id, parsed.data.originalUrl);
+    updated = await updateLinkUrl(
+      userId,
+      parsed.data.id,
+      parsed.data.originalUrl,
+    );
   } catch {
     return { error: "Something went wrong. Please try again." };
   }

@@ -1,4 +1,10 @@
-import { integer, pgTable, text, timestamp, varchar } from "drizzle-orm/pg-core";
+import {
+  integer,
+  pgTable,
+  text,
+  timestamp,
+  varchar,
+} from "drizzle-orm/pg-core";
 
 export const usersTable = pgTable("users", {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
@@ -17,4 +23,3 @@ export const linksTable = pgTable("links", {
 });
 
 export type Link = typeof linksTable.$inferSelect;
-

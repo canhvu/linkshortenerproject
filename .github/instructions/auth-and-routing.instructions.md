@@ -1,5 +1,5 @@
 ---
-description: Read this before implementing or modifying any authentication in the project. 
+description: Read this before implementing or modifying any authentication in the project.
 ---
 
 # Auth And Routing

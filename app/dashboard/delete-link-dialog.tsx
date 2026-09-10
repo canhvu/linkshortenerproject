@@ -54,9 +54,8 @@ export function DeleteLinkDialog({ link }: { link: Link }) {
         <AlertDialogHeader>
           <AlertDialogTitle>Delete link?</AlertDialogTitle>
           <AlertDialogDescription>
-            This will permanently delete /{link.shortCode} and it will no
-            longer redirect to {link.originalUrl}. This action cannot be
-            undone.
+            This will permanently delete /{link.shortCode} and it will no longer
+            redirect to {link.originalUrl}. This action cannot be undone.
           </AlertDialogDescription>
         </AlertDialogHeader>
         {error && <p className="text-sm text-destructive">{error}</p>}

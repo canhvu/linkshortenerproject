@@ -1,12 +1,6 @@
 import { SignUpButton } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
-import {
-  BarChart3,
-  Link2,
-  ShieldCheck,
-  Sparkles,
-  Zap,
-} from "lucide-react";
+import { Link2, ShieldCheck, Sparkles, Zap } from "lucide-react";
 import { redirect } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
@@ -18,10 +12,10 @@ const features = [
     icon: Link2,
   },
   {
-    title: "Track what gets clicks",
+    title: "Keep links organized",
     description:
-      "Understand engagement with quick insights that help you see which links perform best.",
-    icon: BarChart3,
+      "Save your shortened URLs in one place so they are easy to find when you need them.",
+    icon: Link2,
   },
   {
     title: "Share with confidence",
@@ -55,12 +49,11 @@ export default async function Home() {
             </div>
             <div className="space-y-4">
               <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
-                Shorten, organize, and track every link from one simple app.
+                Shorten and organize every link from one simple app.
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
                 Link Shortener gives your team a fast way to create memorable
-                short URLs, keep them organized, and understand which links are
-                getting attention.
+                short URLs and keep them organized in one place.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
@@ -85,9 +78,11 @@ export default async function Home() {
             <div className="rounded-2xl border border-border bg-background p-6">
               <div className="mb-6 flex items-start justify-between gap-4">
                 <div>
-                  <p className="text-sm text-muted-foreground">Today&apos;s share</p>
+                  <p className="text-sm text-muted-foreground">
+                    Your short link
+                  </p>
                   <p className="mt-2 text-2xl font-semibold">
-                    https://sho.rt/campaign-launch
+                    https://sho.rt/product-update
                   </p>
                 </div>
                 <div className="rounded-full bg-muted p-3">
@@ -96,16 +91,16 @@ export default async function Home() {
               </div>
               <div className="grid gap-4 sm:grid-cols-3">
                 <div className="rounded-2xl border border-border bg-card p-4">
-                  <p className="text-sm text-muted-foreground">Clicks</p>
-                  <p className="mt-2 text-3xl font-semibold">24.8K</p>
+                  <p className="text-sm text-muted-foreground">Short code</p>
+                  <p className="mt-2 text-3xl font-semibold">launch</p>
                 </div>
                 <div className="rounded-2xl border border-border bg-card p-4">
-                  <p className="text-sm text-muted-foreground">Saved links</p>
-                  <p className="mt-2 text-3xl font-semibold">128</p>
+                  <p className="text-sm text-muted-foreground">Destination</p>
+                  <p className="mt-2 text-3xl font-semibold">Ready</p>
                 </div>
                 <div className="rounded-2xl border border-border bg-card p-4">
-                  <p className="text-sm text-muted-foreground">Active campaigns</p>
-                  <p className="mt-2 text-3xl font-semibold">12</p>
+                  <p className="text-sm text-muted-foreground">Access</p>
+                  <p className="mt-2 text-3xl font-semibold">Secure</p>
                 </div>
               </div>
             </div>
